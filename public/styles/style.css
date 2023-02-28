@@ -150,8 +150,8 @@ main{
 }
 
 #login-register-area [id='see-all']:hover{
-    padding-top: 5px;
-    padding-bottom: 5px;
+    /* padding-top: 5px;
+    padding-bottom: 5px; */
     background-color: rgb(250, 116, 6);
     color: black;
 }
@@ -160,10 +160,50 @@ main{
     color: blueviolet;
 }
 
+/* ^Main criado com sucesso ******************************************* */
 
 
 
 
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(18, 3, 36);
+    margin-top: 50px;
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+#first-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a:hover{
+    color: rgb(247, 143, 9);
+    transition: 0.5s;
+}
+
+#image-text{
+    color: rgb(241, 10, 230);
+    line-height: 20px;
+    text-shadow: 5px 5px 7px purple;
+}
+
+#copy:hover{
+    color: aquamarine !important;
+}
+
+#second-footer{
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+#second-footer a:hover{
+    color: blue;
+}
 
 
 
