@@ -5,30 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login/Register page</title>
+    <link rel="stylesheet" href="../public/styles/fonts.css">
     <link rel="stylesheet" href="../public/styles/style.css">
+    <link rel="stylesheet" href="../public/styles/media.css">
 </head>
 <body>
-    <header>
 
+    <header>
         <div class="call-word" id="call-word-header">
-            <h3>Marketing</h3>
-            <h3>Criativo</h3>
+            <h1>Marketing</h1>
+            <h1>Criativo</h1>
         </div>
 
         <ul>
-            <li>Início</li>
-            <li>Serviços</li>
-            <li>Sobre</li>
-            <li>Contato</li>
-            <li id="create-account">Já tem uma conta?</li>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+            <li ><a href="#" id="create-account">Já tem uma conta?</a></li>
         </ul>
-        <p>header concluído</p>
     </header>
-    <hr>
+<!-- Header criado -->
+
 
     <main>
 
         <div id="call-to-action">
+
             <div class='call-word' id="call-word-main">
                 <h1>Faça login</h1>
                 <h1><span>Entre no nosso time</span></h1>
@@ -41,36 +44,37 @@
 
         <div id="login-register-area">
 
-            <form action="/login" method="post" class="form-model" id="form-login">
-                <h1>LOGIN</h1>
+            <div id="forms-area">
+                <form action="/login" method="post" class="form-model" id="form-login">
+                    <h1>LOGIN</h1>
 
-                <label for="user">Usuário</label>
-                <input type="text" name="user" id="user-login" placeholder="Usuário">
+                    <label for="user">Usuário</label>
+                    <input type="text" name="user" id="user-login" placeholder="Usuário">
 
-                <label for="password">Senha</label>
-                <input type="text" name="password" id="password-login" placeholder="Senha">
+                    <label for="password">Senha</label>
+                    <input type="text" name="password" id="password-login" placeholder="Senha">
 
-                <button type="submit" class="btn" id="btn-login">LOGIN</button>
+                    <button type="submit" class="btn" id="btn-login">LOGIN</button>
 
-            </form>
-            <hr>
-            <form action="/register" method="post" class="form-model" id="form-register">
-                <h1>Register</h1>
+                </form>
+                <hr>
+                <form action="/register" method="post" class="form-model" id="form-register">
+                    <h1>Register</h1>
 
-                <label for="user">Usuário</label>
-                <input type="text" name="user" id="user-register">
+                    <label for="user">Usuário</label>
+                    <input type="text" name="user" id="user-register" placeholder="Usuário">
 
-                <label for="password">Senha</label>
-                <input type="text" name="password" id="password-register">
+                    <label for="password">Senha</label>
+                    <input type="text" name="password" id="password-register" placeholder="Senha">
 
-                <label for="repeat-password">Repita a senha</label>
-                <input type="text" name="repeat-password" id="password-register">
+                    <label for="repeat-password">Repita a senha</label>
+                    <input type="text" name="repeat-password" id="password-register" placeholder="Repita a senha">
 
-                <button type="submit" class="btn" id="btn-login">LOGIN</button>
+                    <button type="submit" class="btn" id="btn-register">REGISTER</button>
 
-                <button><a href="/see-all-users">SEE ALL</a></button>
-            </form>
-
+                    <button type="submit" id="see-all"><a href="/see-all-users">SEE ALL</a></button>
+                </form>
+            </div>
             
 
         </div>
