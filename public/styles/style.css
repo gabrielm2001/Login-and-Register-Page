@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+
+}
+
+body{
+    max-width: 1000px;
+    margin: auto;
+    background-color: rgb(9, 9, 32);
+    color: white;
+    font-family: poppinsregular, Arial, Helvetica, sans-serif;
+
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 5%;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    display: inline-block;
+    margin-right: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    transition: 0.5s;
+    color: greenyellow;
+}
+
+.call-word{
+    line-height: 27px;
+    padding: 5px;
+}
+
+#call-word-header{
+    text-shadow: 5px 5px 15px white;
+    margin: 10px 0 ;
+}
+
+#create-account{
+    border: 3px solid rgb(110, 221, 110);
+    border-radius: 15px;
+    padding: 10px 15px;
+    box-shadow: 5px 5px 15px rgb(10, 212, 101);
+}
+
+#create-account:hover{
+    transition: 0.5s;
+    background-color: rgb(110, 221, 110);
+    color: black;
+}
+
+/* ^Estilo do header criado^ ****************************************************************/
+
+
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#call-word-main h1{
+    color: greenyellow;
+    text-shadow: 5px 5px 15px greenyellow;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: bolder;
+    /* line-height: 30px; */
+}
+
+#call-word-main span{
+    color: rgb(102, 47, 255);
+    text-shadow: 5px 5px 15px rgb(102, 47, 255);
+}
+
+#login-register-area h1{
+    margin: 10px 0 ;
+    color: greenyellow;
+}
+
+#login-register-area{
+    background-color: rgb(45, 11, 77);
+    width: 35%;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: poppinsbold, Arial, Helvetica, sans-serif;
+    text-align: center;
+    box-shadow: 7px 5px 20px rgb(5, 48, 112);
+}
+
+#form-login{
+    margin-bottom: 40px;
+}
+
+#login-register-area input{
+    display: flex;
+    width: 100%;
+    border: none;
+    flex-direction: row;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    outline: none;
+    background-color: rgb(3, 3, 37);
+}
+
+#login-register-area [type= 'submit']{
+    width: 100%;
+    font-weight: bolder;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgb(36, 187, 36);
+    cursor: pointer;
+}
+
+#btn-register{
+    background-color: rgb(74, 14, 128) !important; 
+}
+
+#btn-register:hover{
+    background-color: blueviolet !important; 
+}
+
+#login-register-area [type= 'submit']:hover{
+    transition: 0.5s;
+    background-color: greenyellow;
+    color: black;
+}
+
+#login-register-area [id='see-all']{
+    padding-top: 5px;
+    background-color: rgb(150, 75, 15);
+}
+
+#login-register-area [id='see-all']:hover{
+    /* padding-top: 5px;
+    padding-bottom: 5px; */
+    background-color: rgb(250, 116, 6);
+    color: black;
+}
+
+#form-register h1{
+    color: blueviolet;
+}
+
+/* ^Main criado com sucesso ******************************************* */
+
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(18, 3, 36);
+    margin-top: 50px;
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+#first-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a:hover{
+    color: rgb(247, 143, 9);
+    transition: 0.5s;
+}
+
+#image-text{
+    color: rgb(241, 10, 230);
+    line-height: 20px;
+    text-shadow: 5px 5px 7px purple;
+}
+
+#copy:hover{
+    color: aquamarine !important;
+}
+
+#second-footer{
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+#second-footer a:hover{
+    color: blue;
+}
+
+
+
+
+
+
