@@ -4,7 +4,7 @@ const main_controller = require('../controlers/main_controler')
 
 const router = express.Router()
 
-router.get('/register', main_controller.render_main)
+router.get('/', main_controller.render_main)
 
 module.exports = router
 
