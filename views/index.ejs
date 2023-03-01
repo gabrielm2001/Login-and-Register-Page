@@ -39,6 +39,14 @@
 
             <article>
                 <img src="/images/—Pngtree—astronauts surf on a surfboard_5995307.png" alt="" width="420">
+
+                <%if(err){%>
+                    <h1><b>ERROR: </b><%=err%></h1>
+                <%}%>
+
+                <%if(success){%>
+                    <h1><strong>SUCCESS: </strong><%=success%></h1>
+                <%}%>
             </article>
         </div>
 
@@ -65,12 +73,12 @@
                     <input type="text" name="user" id="user-register" placeholder="Usuário">
 
                     <label for="password">Senha</label>
-                    <input type="text" name="password" id="password-register" placeholder="Senha">
+                    <input type="text" name="password" id="password_register" placeholder="Senha">
 
                     <label for="repeat-password">Repita a senha</label>
-                    <input type="text" name="repeat-password" id="password-register" placeholder="Repita a senha">
+                    <input type="text" name="repeat_password" id="password_register" placeholder="Repita a senha">
 
-                    <button type="submit" class="btn" id="btn-register">REGISTER</button>
+                    <button type="submit" class="btn" id="btn_register">REGISTER</button>
 
                     <button type="submit" id="see-all"><a href="/see-all-users">SEE ALL</a></button>
                 </form>
