@@ -118,7 +118,7 @@ main{
     margin-bottom: 10px;
     outline: none;
     box-shadow: 5px 5px 15px rgb(3, 3, 37);
-    background-color: rgb(3, 3, 37) !important;
+    background-color: rgb(3, 3, 37) ;
 }
 
 #login-register-area [type= 'submit']{
@@ -131,11 +131,11 @@ main{
     cursor: pointer;
 }
 
-#btn-register{
+#btn_register{
     background-color: rgb(74, 14, 128) !important; 
 }
 
-#btn-register:hover{
+#btn_register:hover{
     background-color: blueviolet !important; 
 }
 
@@ -215,4 +215,8 @@ b{
 
 strong{
     color: greenyellow;
+}
+
+article{
+    text-align: center;
 }

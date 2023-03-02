@@ -73,8 +73,38 @@ module.exports = {
             }
             // **************************************************************************
         }    
-        
+
         // **************************************************************************
+
+    },
+
+    login: async (req,res)=>{
+
+        let user_login = req.body.user
+        let user_password = req.body.password
+
+        let both_user_or_password_empty = !user_login || !user_password
+        let user = {usuario: req.body.user, senha: req.body.password}
+
+        let doc = await User.find(user)
+
+        let bool_doc_lenght = doc.length !== 0 
+
+        console.log(doc)
+
+        if (bool_doc_lenght && !both_user_or_password_empty){
+            console.log('1')
+            res.render('index', {err: '', success: 'Usuário logado'})
+        }else if(!both_user_or_password_empty){
+            console.log('2')
+
+            res.render('index', {err: 'Usuário ou senha incorretos', success:''})
+        }
+
+        if (both_user_or_password_empty){
+            console.log('3')
+            res.render('index', {err: 'Usuário ou senha vazios', success: ''})
+        }
 
     }
 
