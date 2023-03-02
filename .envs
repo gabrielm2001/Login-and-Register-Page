@@ -1,5 +1,0 @@
-// retire o "s" desse arquivo para criar seu .env e edite ele
-
-// MONGOOSE_CONNECTION_URI = 'seu MongoURI'
-
-// PORT = sua porta

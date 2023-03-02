@@ -1,7 +1,15 @@
 # Login and Register Page
  Uma página para o usuario logar ou se cadastrar
 
-Para **inciar** o app basta digitar no terminal ``npm install``
+**1** digite no terminal ``npm install``
+
+**2** Digite ``cd back_end``
+
+**3** Modifique o arquivo -.envs- e retire o s ficando -.env-
+
+**4** Siga as instruções do arquivo .env
+
+**5** Digite ``node index``
 
 
 

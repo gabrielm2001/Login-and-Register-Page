@@ -80,31 +80,44 @@ module.exports = {
 
     login: async (req,res)=>{
 
+        // Peguei o usuário e a senha digitados no body********
         let user_login = req.body.user
         let user_password = req.body.password
+        // ******************************************************
 
+        // Criei variáveis bolleanas para colocar nas condicionais: verifica se o usuario ou a senha estão vazios**
         let both_user_or_password_empty = !user_login || !user_password
+        // *************************************************************************************************************
+
         let user = {usuario: req.body.user, senha: req.body.password}
 
         let doc = await User.find(user)
 
+        // Verifica se o doc retornou algum usuário, se tiver algum usuário irá retornar True**
         let bool_doc_lenght = doc.length !== 0 
+        // ************************************************************************************
 
-        console.log(doc)
 
+        // Vejo se retornei algum usuário e se os campos estão preenchidos**
         if (bool_doc_lenght && !both_user_or_password_empty){
-            console.log('1')
             res.render('index', {err: '', success: 'Usuário logado'})
+        // *****************************************************************
+
+        // Caso não retorne nada e os campos estão preenchidos só sobrou a opção de usuário ou senha incorretos**
         }else if(!both_user_or_password_empty){
-            console.log('2')
 
             res.render('index', {err: 'Usuário ou senha incorretos', success:''})
         }
+        // ******************************************************************************************
 
+
+        // Se um dos campos estiverem vazios irei responder com um erro para o usuário**
         if (both_user_or_password_empty){
             console.log('3')
             res.render('index', {err: 'Usuário ou senha vazios', success: ''})
+        
         }
+        // ******************************************************************************
 
     }
 
