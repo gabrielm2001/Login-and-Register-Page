@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register page</title>
+    <link rel="stylesheet" href="../public/styles/fonts.css">
+    <link rel="stylesheet" href="../public/styles/media.css">
+    <link rel="stylesheet" href="../public/styles/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="call-word" id="call-word-header">
+            <h1>Marketing</h1>
+            <h1>Criativo</h1>
+        </div>
+
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+            <li ><a href="#" id="create-account">Já tem uma conta?</a></li>
+        </ul>
+    </header>
+<!-- Header criado -->
+
+
+    <main>
+
+        <div id="call-to-action">
+
+            <div class='call-word' id="call-word-main">
+                <h1>Faça login</h1>
+                <h1><span>Entre no nosso time</span></h1>
+            </div>
+
+            <article>
+                <img src="../public/images/—Pngtree—astronauts surf on a surfboard_5995307.png" alt="" width="420">
+
+            </article>
+        </div>
+
+        <div id="login-register-area">
+
+            <div id="forms-area">
+                <form action="/login" method="post" class="form-model" id="form-login">
+                    <h1>LOGIN</h1>
+
+                    <label for="user">Usuário</label>
+                    <input type="text" name="user" id="user-login" placeholder="Usuário">
+
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" id="password-login" placeholder="Senha">
+
+                    <button type="submit" class="btn" id="btn-login">LOGIN</button>
+
+                </form>
+                <hr>
+                <form action="/register" method="post" class="form-model" id="form-register">
+                    <h1>Register</h1>
+
+                    <label for="user">Usuário</label>
+                    <input type="text" name="user" id="user-register" placeholder="Usuário">
+
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" id="password_register" placeholder="Senha">
+
+                    <label for="repeat-password">Repita a senha</label>
+                    <input type="password" name="repeat_password" id="password_register" placeholder="Repita a senha">
+
+                    <button type="submit" class="btn" id="btn_register">REGISTER</button>
+
+                    <button type="submit" id="see-all"><a href="/see-all-users">SEE ALL</a></button>
+                </form>
+            </div>
+            
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div id="first-footer">
+            <article>
+                <img src="../public/images/—Pngtree—red wolf logo for game_5518165.png" alt="" width="100px">
+                <p id="image-text">slogan company</p>
+            </article>
+
+            <ul>
+                <li><a href="#">THEMES TOSALE</a></li>
+                <li><a href="#">PRE-SALE FAOS</a></li>
+                <li><a href="#">SUBMIT A TICKET</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">THEME TWEAK</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">SHOWCASE</a></li>
+                <li><a href="#">WIDGETKIT</a></li>
+                <li><a href="#">SUPORT</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#">RESOURCES</a></li>
+                <li><a href="#">RESOURCES</a></li>
+            </ul>
+
+            
+        </div>
+        <hr>
+        <div id="second-footer">
+            <ul>
+                <li><a href="#">LOGO</a></li>
+                <li><a href="#">LOGO</a></li>
+                <li><a href="#">LOGO</a></li>
+                <li><a href="#">LOGO</a></li>
+                <li><a href="#" id="copy">@Copyright.All.Rights.reserved.</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>

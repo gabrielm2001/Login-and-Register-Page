@@ -13,6 +13,6 @@
 
 *_O projeto ainda não está terminado, ainda faltam algumas features_*
 
-
+Se quiser ver só o front end, vá em **front_end/views/index_Copia.html** *_Aí é só abrir ele_*
 
 
