@@ -95,13 +95,13 @@ main{
 }
 
 #login-register-area{
-    background-color: rgb(45, 11, 77);
-    width: 35%;
+    background-color: rgb(21, 28, 92);
+    width: 40%;
     padding: 20px;
     border-radius: 20px;
     font-family: poppinsbold, Arial, Helvetica, sans-serif;
     text-align: center;
-    box-shadow: 7px 5px 20px rgb(5, 48, 112);
+    box-shadow: 7px 5px 20px rgb(21, 28, 92);
 }
 
 #form-login{
@@ -114,10 +114,11 @@ main{
     border: none;
     flex-direction: row;
     border-radius: 15px;
-    padding: 10px 20px;
+    padding: 20px 15px;
     margin-bottom: 10px;
     outline: none;
-    background-color: rgb(3, 3, 37);
+    box-shadow: 5px 5px 15px rgb(3, 3, 37);
+    background-color: rgb(3, 3, 37) ;
 }
 
 #login-register-area [type= 'submit']{
@@ -130,11 +131,11 @@ main{
     cursor: pointer;
 }
 
-#btn-register{
+#btn_register{
     background-color: rgb(74, 14, 128) !important; 
 }
 
-#btn-register:hover{
+#btn_register:hover{
     background-color: blueviolet !important; 
 }
 
@@ -206,7 +207,16 @@ footer a:hover{
 }
 
 
+/* estilo do EJS */
 
+b{
+    color: rgb(231, 5, 5);
+}
 
+strong{
+    color: greenyellow;
+}
 
-
+article{
+    text-align: center;
+}
