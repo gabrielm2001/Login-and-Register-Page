@@ -3,13 +3,11 @@
 
 **1**- digite no terminal ``npm install``
 
-**2**- Digite ``cd back_end``
+**2**- Modifique o arquivo _.env_exemple_ ficando -.env-
 
-**3**- Modifique o arquivo _.envs_ e retire o "s" ficando -.env-
+**3**- Siga as instruções do arquivo .env
 
-**4**- Siga as instruções do arquivo .env
-
-**5**- Digite ``node index``
+**4**- Digite ``node index``
 
 *_O projeto ainda não está terminado, ainda faltam algumas features_*
 
