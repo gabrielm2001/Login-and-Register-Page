@@ -1,4 +1,4 @@
-// Descomente essas linhas
+// Descomente essas linhas após modificar o tipo do arquivo
 
 // MONGOOSE_CONNECTION_URI = 'mongodb+srv://<your user name>:<your password>@<yor colection>.8uv8pwn.mongodb.net/?retryWrites=true&w=majority'
 

@@ -113,7 +113,7 @@ module.exports = {
 
         // Se um dos campos estiverem vazios irei responder com um erro para o usuário**
         if (both_user_or_password_empty){
-            console.log('3')
+
             res.render('index', {err: 'Usuário ou senha vazios', success: ''})
         
         }
