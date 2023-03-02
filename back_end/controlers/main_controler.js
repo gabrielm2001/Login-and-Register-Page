@@ -1,5 +1,7 @@
 const User = require('../models/user_model')
 
+const bcrypt = require('bcryptjs')
+
 let err = ''
 let success = ''
 
@@ -52,9 +54,9 @@ module.exports = {
 
             // Caso um dos campos não sejam vazios e as senhas forem diferente faça:
             if (!not_vazio && !senhas_diferentes){
-
+                let crypt_password = bcrypt.hashSync(req.body.password, 10)
                 // Precisei eliminar a repetição de senha para salvar o usuário no banco de dados
-                let person = {usuario: req.body.user, senha: req.body.password}
+                let person = {usuario: req.body.user, senha: crypt_password}
                 let user = new User(person)
                 try{
                     let doc = await user.save({})
@@ -83,29 +85,37 @@ module.exports = {
         // Peguei o usuário e a senha digitados no body********
         let user_login = req.body.user
         let user_password = req.body.password
+
         // ******************************************************
 
         // Criei variáveis bolleanas para colocar nas condicionais: verifica se o usuario ou a senha estão vazios**
         let both_user_or_password_empty = !user_login || !user_password
         // *************************************************************************************************************
 
-        let user = {usuario: req.body.user, senha: req.body.password}
+        let user = req.body
+        
+        let doc = await User.find({usuario: user.user})
 
-        let doc = await User.find(user)
+        let bool_crypt = false
 
         // Verifica se o doc retornou algum usuário, se tiver algum usuário irá retornar True**
         let bool_doc_lenght = doc.length !== 0 
         // ************************************************************************************
 
+        // Se encontrou então verifique a senha ****
+        if (bool_doc_lenght){
+            let Senha = doc[0].senha
+            bool_crypt = bcrypt.compareSync(user.password, Senha)
+        }
+        // ******************************************
 
-        // Vejo se retornei algum usuário e se os campos estão preenchidos**
-        if (bool_doc_lenght && !both_user_or_password_empty){
+        // Vejo se a senha do usuário está correta e se os campos estão preenchidos**
+        if (bool_crypt && !both_user_or_password_empty){
             res.render('index', {err: '', success: 'Usuário logado'})
-        // *****************************************************************
+        // ***************************************************************************
 
         // Caso não retorne nada e os campos estão preenchidos só sobrou a opção de usuário ou senha incorretos**
         }else if(!both_user_or_password_empty){
-
             res.render('index', {err: 'Usuário ou senha incorretos', success:''})
         }
         // ******************************************************************************************
