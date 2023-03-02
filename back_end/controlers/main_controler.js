@@ -1,6 +1,7 @@
 const User = require('../models/user_model')
 
 const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
 
 let err = ''
 let success = ''
@@ -9,7 +10,7 @@ module.exports = {
 
     render_main: (req,res)=>{
         // Renderiza a página principal
-        res.render('index',{err: '', success: ''})
+        res.render('index',{err: '', success: '', token: ''})
     },
 
     register: async (req,res)=>{
@@ -37,7 +38,7 @@ module.exports = {
 
         // Agora vou dar render com o erro correto, porém tive que colocar o "res" dentro de um if*************************************************
         if (not_vazio || senhas_diferentes){ 
-            res.render('index',{err, success: ''})
+            res.render('index',{err, success: '', token: ''})
         }
         // ****************************************************************************************
 
@@ -60,7 +61,7 @@ module.exports = {
                 let user = new User(person)
                 try{
                     let doc = await user.save({})
-                    res.render('index', {err: '',success: 'Usuário cadastrado com sucesso'})
+                    res.render('index', {err: '',success: 'Usuário cadastrado com sucesso', token: ''})
                 }catch(err){
                     res.send(err)
                 }
@@ -71,7 +72,7 @@ module.exports = {
         }else{
             // Tive que colocar mais uma camada para impedir que 2 respostas fossem enviados
             if (!senhas_diferentes && !not_vazio){
-                res.render('index', {err: 'Usuário já existe',success: ''})
+                res.render('index', {err: 'Usuário já existe',success: '', token: ''})
             }
             // **************************************************************************
         }    
@@ -111,12 +112,18 @@ module.exports = {
 
         // Vejo se a senha do usuário está correta e se os campos estão preenchidos**
         if (bool_crypt && !both_user_or_password_empty){
-            res.render('index', {err: '', success: 'Usuário logado'})
+            // Pego o secredo no arq .env e dps crio o token a partir do usuario do _id, enviandp o token pelo header da requisição, podendo verifica-lo posteriormente
+            const secret = process.env.SECRET
+            const token = jwt.sign({id: doc[0]._id, usuario: doc[0].usuario}, secret)
+
+            res.header('authorization-token', token)
+            // **********************************************************************************
+            res.render('index', {err: '', success: 'Usuário logado', token: token})
         // ***************************************************************************
 
         // Caso não retorne nada e os campos estão preenchidos só sobrou a opção de usuário ou senha incorretos**
         }else if(!both_user_or_password_empty){
-            res.render('index', {err: 'Usuário ou senha incorretos', success:''})
+            res.render('index', {err: 'Usuário ou senha incorretos', success:'', token: ''})
         }
         // ******************************************************************************************
 
@@ -124,7 +131,7 @@ module.exports = {
         // Se um dos campos estiverem vazios irei responder com um erro para o usuário**
         if (both_user_or_password_empty){
 
-            res.render('index', {err: 'Usuário ou senha vazios', success: ''})
+            res.render('index', {err: 'Usuário ou senha vazios', success: '', token: ''})
         
         }
         // ******************************************************************************

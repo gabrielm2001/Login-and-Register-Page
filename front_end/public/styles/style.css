@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     color: white;
 
 }
@@ -215,8 +215,14 @@ b{
 
 strong{
     color: greenyellow;
+    max-width: 1000px;
 }
 
 article{
     text-align: center;
 }
+
+#token{
+    overflow: auto;
+}
+
