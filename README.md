@@ -5,13 +5,13 @@
 
 **2** Digite ``cd back_end``
 
-**3** Modifique o arquivo -.envs- e retire o "s" ficando -.env-
+**3** Modifique o arquivo _.envs_ e retire o "s" ficando -.env-
 
 **4** Siga as instruções do arquivo .env
 
 **5** Digite ``node index``
 
-*-O projeto ainda não está terminado, ainda faltam algumas features-*
+*_O projeto ainda não está terminado, ainda faltam algumas features_*
 
 
 
