@@ -1,0 +1,3 @@
+let MONGOOSE_CONNECTION_URI = process.env.MONGOOSE_CONNECTION_URI
+let PORT = process.env.PORT
+module.exports = {MONGOOSE_CONNECTION_URI, PORT}
