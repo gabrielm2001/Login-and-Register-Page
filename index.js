@@ -20,12 +20,12 @@ app.use('/', express.urlencoded({extended: true}))
 
 // ******Configuração da engine "Ejs" *
 app.set('view engine', 'ejs')
-app.set('views', '../front_end/views')
-app.use(express.static('../front_end/public'))
+app.set('views', './front_end/views')
+app.use(express.static('./front_end/public'))
 // ************************************
 
 // ***************Criada a rota do Main encamihando para a rota desejada*
-const main_router = require('./routes/main_router')
+const main_router = require('./back_end/routes/main_router')
 
 app.use('/', main_router)
 // **********************************************************************

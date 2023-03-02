@@ -3,9 +3,7 @@
 
 **1**- digite no terminal ``npm install``
 
-**2**- Digite ``cd back_end``
-
-**3**- Modifique o arquivo _.envs_ e retire o "s" ficando -.env-
+**3**- Modifique o arquivo _.env_exemplo_ ficando -.env-
 
 **4**- Siga as instruções do arquivo .env
 
