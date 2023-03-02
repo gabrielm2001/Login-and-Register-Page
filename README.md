@@ -1,6 +1,16 @@
 # Login and Register Page
- Uma página para o usuario logar ou se cadastrar
+ Uma página para o usuario logar e se cadastrar
 
-Para **inciar** o app basta digitar no terminal ``npm install``
-Para ver o **HTML** e o **CSS** entre na pasta **views** e **styles**, respectivamente
+**1**- digite no terminal ``npm install``
+
+**2**- Modifique o arquivo _.env_exemple_ ficando -.env-
+
+**3**- Siga as instruções do arquivo .env
+
+**4**- Digite ``node index``
+
+*_O projeto ainda não está terminado, ainda faltam algumas features_*
+
+Se quiser ver só o front end, vá em **front_end/views/index_Copia.html** *_Aí é só abrir ele_*
+
 
