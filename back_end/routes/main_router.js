@@ -8,6 +8,8 @@ router.get('/', main_controller.render_main)
 router.post('/register', main_controller.register)
 router.post('/login', main_controller.login)
 
+router.get('/see_all', main_controller.see_all)
+
 module.exports = router
 
 
